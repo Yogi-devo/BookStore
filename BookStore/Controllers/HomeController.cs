@@ -8,10 +8,20 @@ namespace BookStore.Controllers
 {
     public class HomeController:Controller
     {
-        public string Index()
+        public ViewResult Index()
 
         {
-            return "Yogi ji";
+            //return View("TempView/YogiTemp.cshtml");
+            return View();
+        }
+        public ViewResult About()
+
+        {
+            return View();
+        }
+        public ViewResult ContactUs()
+                   {
+            return View();
         }
     }
 }

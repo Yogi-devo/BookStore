@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 
 namespace BookStore
@@ -27,31 +29,37 @@ namespace BookStore
                 app.UseDeveloperExceptionPage();
             }
 
-           // app.Use(async (context, next) =>
-           //{
-           //    await context.Response.WriteAsync("  Hellow from first Middleware");
+            // app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("  Hellow from first Middleware");
 
-           //    await next();
+            //    await next();
 
-           //    await context.Response.WriteAsync("  Hellow from first Middleware");
-           //});
+            //    await context.Response.WriteAsync("  Hellow from first Middleware");
+            //});
 
-           // app.Use(async (context, next) =>
-           // {
-           //     await context.Response.WriteAsync("  Hellow from Second Middleware");
+            // app.Use(async (context, next) =>
+            // {
+            //     await context.Response.WriteAsync("  Hellow from Second Middleware");
 
-           //     await next();
+            //     await next();
 
-           //     await context.Response.WriteAsync("  Hellow from Second Middleware");
-           // });
+            //     await context.Response.WriteAsync("  Hellow from Second Middleware");
+            // });
 
-           // app.Use(async (context, next) =>
-           // {
-           //     await context.Response.WriteAsync("  Hellow from Third Middleware");
+            // app.Use(async (context, next) =>
+            // {
+            //     await context.Response.WriteAsync("  Hellow from Third Middleware");
 
-           //     await next();
-           // });
+            //     await next();
+            // });
+            app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "MyStaticFile")),
+                RequestPath= "/MyStaticFile"
 
+            }) ; 
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
