@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]|Book Store Application</title>
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggler navbar-light bg-white border-bottom shadow-sm mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="~/images/logo2.jpg" width="40" height="40" />
+                    Book Store
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                        aria-expanded="false" aria-label="toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="btn btn-outline-primary">Login</a>
+                            <a class="btn btn-outline-primary">Register</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item list-group-item">
+                            <a class="nave-link text-dark" href="home/index"> Home</a>
+                        </li>
+
+                        <li class="nav-item list-group-item">
+                            <a class="nave-link text-dark " href="home/aboutus">  About</a>
+                        </li>
+
+                        <li class="nav-item list-group-item">
+                            <a class="nave-link text-dark" href="home/ContactUs">  Contact</a>
+                        </li>
+                        <li class="nav-item list-group-item">
+                            <a class="nave-link text-dark" href="book/getAllbooks">  All Books</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+    @RenderSection("breadcrumb", required: false)
+    <footer class="border-top footer text-muted text-center">
+        <div class="container">
+            Copyright &copy; Book Store @DateTime.Now.Year <a href="https://yogiTech.com/"> YogiTech.com</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    @RenderSection("Allert", required: false)
+
+</body>
+</html>
