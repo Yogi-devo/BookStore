@@ -4,7 +4,22 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewData["Title"]|Book Store Application</title>
-    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <environment include="Development">
+        <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    </environment>
+    <environment exclude="Development">
+        @*<link href="~/lib/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />*@
+
+        <link rel="stylesheet" 
+              href="http://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+              asp-fallback-href="~/lib/twitter-bootstrap/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only"
+              asp-fallback-test-property="position"
+              asp-fallback-test-value="absolute"
+              integrity="" 
+              crossorigin="anonymous">
+    </environment>
+    
     <link href="~/css/Site.css" rel="stylesheet" />
 </head>
 <body>
@@ -12,7 +27,7 @@
         <nav class="navbar navbar-expand-sm navbar-toggler navbar-light bg-white border-bottom shadow-sm mb-3">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="~/images/logo2.jpg" width="40" height="40" />
+                    <img src="~/images/logo2.jpg" width="40" height="40" asp-append-version="true" />
                     Book Store
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
@@ -27,20 +42,24 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item list-group-item">
-                            <a class="nave-link text-dark" href="home/index"> Home</a>
+                        <li class="nav-item custom-nav">
+                            <a class="nave-link text-dark" asp-controller="Home" asp-action="Index"> Home</a>
                         </li>
 
-                        <li class="nav-item list-group-item">
-                            <a class="nave-link text-dark " href="home/aboutus">  About</a>
+                        <li class="nav-item custom-nav">
+                            <a class="nave-link text-dark " asp-controller="Home" asp-action="AboutUs">  About</a>
                         </li>
 
-                        <li class="nav-item list-group-item">
-                            <a class="nave-link text-dark" href="home/ContactUs">  Contact</a>
+                        <li class="nav-item custom-nav">
+                            <a class="nave-link text-dark" asp-controller="Home" asp-action="ContactUs">  Contact</a>
                         </li>
-                        <li class="nav-item list-group-item">
-                            <a class="nave-link text-dark" href="book/getAllbooks">  All Books</a>
+                        <li class="nav-item custom-nav">
+                            <a class="nave-link text-dark" asp-controller="book" asp-action="getAllbooks">  All Books</a>
                         </li>
+                        <li class="nav-item custom-nav">
+                            <a class="nave-link text-dark" asp-protocol="http" asp-host="yogitech.com" >External Link</a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -53,7 +72,7 @@
         </main>
     </div>
     @RenderSection("breadcrumb", required: false)
-    <footer class="border-top footer text-muted text-center">
+    <footer class="border-top footer text-muted text-center" style="position: sticky; bottom: 0;background-color:aqua">
         <div class="container">
             Copyright &copy; Book Store @DateTime.Now.Year <a href="https://yogiTech.com/"> YogiTech.com</a>
         </div>

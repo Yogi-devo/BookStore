@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dotnet core mvc 3.1\\BookStore\\BookStore\\BookStore.csproj": {}
+    "F:\\BookStore\\BookStore\\BookStore.csproj": {}
   },
   "projects": {
-    "D:\\dotnet core mvc 3.1\\BookStore\\BookStore\\BookStore.csproj": {
+    "F:\\BookStore\\BookStore\\BookStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dotnet core mvc 3.1\\BookStore\\BookStore\\BookStore.csproj",
+        "projectUniqueName": "F:\\BookStore\\BookStore\\BookStore.csproj",
         "projectName": "BookStore",
-        "projectPath": "D:\\dotnet core mvc 3.1\\BookStore\\BookStore\\BookStore.csproj",
-        "packagesPath": "C:\\Users\\Yogendra\\.nuget\\packages\\",
-        "outputPath": "D:\\dotnet core mvc 3.1\\BookStore\\BookStore\\obj\\",
+        "projectPath": "F:\\BookStore\\BookStore\\BookStore.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "F:\\BookStore\\BookStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Yogendra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

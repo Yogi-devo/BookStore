@@ -14,13 +14,13 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
 
-                        <img src="~/images/book/book.jpg" class="d-block w-100" alt="First Slide">
+                        <img src="~/images/book/book.jpg" class="d-block w-100" alt="First Slide" asp-append-version="true">
                     </div>
                     <div class="carousel-item">
-                        <img src="~/images/book/book2.jpg" class="d-block w-100" alt="Second Slide">
+                        <img src="~/images/book/book2.jpg" class="d-block w-100" alt="Second Slide" asp-append-version="true">
                     </div>
                     <div class="carousel-item">
-                        <img src="~/images/book/book3.jpg" class="d-block w-100" alt="...Third Slide">
+                        <img src="~/images/book/book3.jpg" class="d-block w-100" alt="...Third Slide" asp-append-version="true">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -75,7 +75,7 @@
 
     <hr />
 
-    <div class="py-5 bg-light">
+    <div class="py-5 bg-light" id="similarBooks">
         <h3 class="h3">Similar Book</h3>
         <div class="row">
             @for (int i = 0; i < 5; i++)
