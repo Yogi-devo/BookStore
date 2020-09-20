@@ -57,7 +57,10 @@
                             <a class="nave-link text-dark" asp-controller="book" asp-action="getAllbooks">  All Books</a>
                         </li>
                         <li class="nav-item custom-nav">
-                            <a class="nave-link text-dark" asp-protocol="http" asp-host="yogitech.com" >External Link</a>
+                            <a class="nave-link text-dark" asp-controller="book" asp-action="AddNewBooks">Add New Books</a>
+                        </li>
+                        <li class="nav-item custom-nav">
+                            <a class="nave-link text-dark" asp-protocol="http" asp-host="yogitech.com">External Link</a>
                         </li>
 
                     </ul>
@@ -72,7 +75,7 @@
         </main>
     </div>
     @RenderSection("breadcrumb", required: false)
-    <footer class="border-top footer text-muted text-center" style="position: sticky; bottom: 0;background-color:aqua">
+    <footer class="border-top footer text-muted text-center" style="position: sticky; bottom: 0;background-color:lightblue">
         <div class="container">
             Copyright &copy; Book Store @DateTime.Now.Year <a href="https://yogiTech.com/"> YogiTech.com</a>
         </div>
