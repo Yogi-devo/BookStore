@@ -7,7 +7,6 @@ D:\dotnet core mvc 3.1\BookStore\BookStore\bin\Debug\netcoreapp3.1\BookStore.run
 D:\dotnet core mvc 3.1\BookStore\BookStore\bin\Debug\netcoreapp3.1\BookStore.runtimeconfig.dev.json
 D:\dotnet core mvc 3.1\BookStore\BookStore\bin\Debug\netcoreapp3.1\BookStore.dll
 D:\dotnet core mvc 3.1\BookStore\BookStore\bin\Debug\netcoreapp3.1\BookStore.pdb
-D:\dotnet core mvc 3.1\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.csprojAssemblyReference.cache
 D:\dotnet core mvc 3.1\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.AssemblyInfoInputs.cache
 D:\dotnet core mvc 3.1\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.AssemblyInfo.cs
 D:\dotnet core mvc 3.1\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.RazorTargetAssemblyInfo.cache
@@ -470,12 +469,7 @@ F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.StaticF
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.WebSockets.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.WebUtilities.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.CSharp.dll
-F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Caching.Abstractions.dll
-F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Caching.Memory.dll
-F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Abstractions.dll
-F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Binder.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.CommandLine.dll
-F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.FileExtensions.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Ini.dll
@@ -483,8 +477,6 @@ F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configu
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Xml.dll
-F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.DependencyInjection.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
@@ -499,19 +491,15 @@ F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Identit
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Identity.Stores.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Localization.Abstractions.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Localization.dll
-F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Abstractions.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Configuration.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Console.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Debug.dll
-F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.EventLog.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.EventSource.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.TraceSource.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.ObjectPool.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Options.DataAnnotations.dll
-F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Options.dll
-F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Primitives.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.WebEncoders.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.JSInterop.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\Microsoft.Net.Http.Headers.dll
@@ -525,7 +513,6 @@ F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\System.AppContext.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\System.Buffers.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\System.Collections.Concurrent.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\System.Collections.dll
-F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\System.Collections.Immutable.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\System.Collections.NonGeneric.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\System.Collections.Specialized.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.Annotations.dll
@@ -542,7 +529,6 @@ F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\System.Data.DataSetExtension
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\System.Data.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Contracts.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Debug.dll
-F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.DiagnosticSource.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.EventLog.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.FileVersionInfo.dll
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Process.dll
@@ -825,3 +811,44 @@ D:\dotnet core mvc 3.1\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.Ent
 D:\dotnet core mvc 3.1\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.csproj.CoreCompileInputs.cache
 D:\dotnet core mvc 3.1\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.MvcApplicationPartsAssemblyInfo.cs
 D:\dotnet core mvc 3.1\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.MvcApplicationPartsAssemblyInfo.cache
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+F:\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Book\AddNewBooks.cshtml.g.cs
+D:\dotnet core mvc 3.1\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.csprojAssemblyReference.cache

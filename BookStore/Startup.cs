@@ -23,13 +23,17 @@ namespace BookStore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<BookStoreContext>(
-                options => options.UseSqlServer(@"Server=Server=DESKTOP-L1720AC\SQLEXPRESS01;Database=BookStore; Integrated Security=True;"));
+                options => options.UseSqlServer(@"Server=DESKTOP-L1720AC\SQLEXPRESS01; Database=BookStore; Integrated Security=True;"));
             services.AddControllersWithViews();
             services.AddScoped<BookRepository, BookRepository>();
-                
+            services.AddScoped<LanguageRepository, LanguageRepository>();
+
 #if DEBUG
 
-            services.AddRazorPages().AddRazorRuntimeCompilation();
+            services.AddRazorPages().AddRazorRuntimeCompilation().AddViewOptions(option=> 
+            {
+                option.HtmlHelperOptions.ClientValidationEnabled = false;
+            });
 #endif
         }
 
@@ -66,12 +70,12 @@ namespace BookStore
             //     await next();
             // });
             app.UseStaticFiles();
-            app.UseStaticFiles(new StaticFileOptions()
-            {
-                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "MyStaticFile")),
-                RequestPath= "/MyStaticFile"
+            //app.UseStaticFiles(new StaticFileOptions()
+            //{
+            //    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "MyStaticFile")),
+            //    RequestPath= "/MyStaticFile"
 
-            }) ; 
+            //}) ; 
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

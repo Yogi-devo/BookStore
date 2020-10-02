@@ -15,10 +15,12 @@ namespace BookStore.Data
         }
         public DbSet<Books> Books { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-L1720AC\SQLEXPRESS01;Database=BookStore;Integrated Security=True;");
-            base.OnConfiguring(optionsBuilder);
-        }
+        public DbSet<Language> Language { get; set; }
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(@"Server=DESKTOP-L1720AC\SQLEXPRESS01; Database=BookStore;Integrated Security=True;");
+        //    base.OnConfiguring(optionsBuilder);
+        //}
     }
 }
