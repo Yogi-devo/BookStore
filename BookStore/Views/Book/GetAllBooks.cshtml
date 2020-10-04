@@ -7,21 +7,23 @@
 
         @foreach (var book in Model)
         {
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <img src="@book.CoverImageUrl" class="img-thumbnail" />
-                        <h5 class="display-4">@book.Title</h5>
-                        <p class="card-text">@book.Description</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <a asp-controller="book" asp-action="getbook" asp-route-id="@book.id" 
-                                   asp-fragment="similarBooks"
-                                   class="btn btn-sm btn-outline-secondary">View Details</a>
-                             </div>
-                            <small class="text-muted">@book.Author</small>
-                        </div>
+        <div class="col-md-4">
+            <partial name="_bookThumbnail" model="@book" />
+
+            @*<div class="card mb-4 shadow-sm">
+                <img src="@book.CoverImageUrl" class="img-thumbnail" />
+                <h5 class="display-4">@book.Title</h5>
+                <p class="card-text">@book.Description</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <a asp-controller="book" asp-action="getbook" asp-route-id="@book.id"
+                           asp-fragment="similarBooks"
+                           class="btn btn-sm btn-outline-secondary">View Details</a>
                     </div>
+                    <small class="text-muted">@book.Author</small>
                 </div>
+            </div>*@
+        </div>
             
         }
 

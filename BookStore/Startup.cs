@@ -25,8 +25,8 @@ namespace BookStore
             services.AddDbContext<BookStoreContext>(
                 options => options.UseSqlServer(@"Server=DESKTOP-L1720AC\SQLEXPRESS01; Database=BookStore; Integrated Security=True;"));
             services.AddControllersWithViews();
-            services.AddScoped<BookRepository, BookRepository>();
-            services.AddScoped<LanguageRepository, LanguageRepository>();
+            services.AddScoped<IBookRepository, BookRepository>();
+            services.AddScoped<ILanguageRepository, LanguageRepository>();
 
 #if DEBUG
 

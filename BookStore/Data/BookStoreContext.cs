@@ -17,6 +17,8 @@ namespace BookStore.Data
 
         public DbSet<Language> Language { get; set; }
 
+        public DbSet<BookGallery> BookGallery { get; set; }
+
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
         //    optionsBuilder.UseSqlServer(@"Server=DESKTOP-L1720AC\SQLEXPRESS01; Database=BookStore;Integrated Security=True;");

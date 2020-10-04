@@ -3,3 +3,5 @@
 ################################################################################
 
 /BookStore/wwwroot/books/pdf
+/BookStore/wwwroot/books/gallery
+/BookStore/wwwroot/books/cover

@@ -8,7 +8,7 @@ using BookStore.Models;
 
 namespace BookStore.Controllers
 {
-    public class HomeController:Controller
+    public class HomeController : Controller
     {
         [ViewData]
         public string CustoProperty { get; set; } //its for ViewData Property
@@ -29,18 +29,37 @@ namespace BookStore.Controllers
 
             ViewData["Property1"] = "Yogendra Yadav";
             ViewData["book"] = new BookModel() { Author = "yogi", id = 1 };
-            CustoProperty  = "Custom Value"; //its ViewData Property
+            CustoProperty = "Custom Value"; //its ViewData Property
             Title = "Home Page From Controller";//This title will mapp with layout page directly without writing it at view page
             return View();
         }
+
+        [Route("about-us")]
         public ViewResult AboutUs()
 
         {
             return View();
         }
+
+        //[HttpGet("contact-us/{name:alpha:minlength(3)}")]
         public ViewResult ContactUs()
-        {           
+        {
             return View();
+        }
+        [Route("test/a{a}")]
+        public string Test(string a)
+        {
+            return a;
+        }
+        [Route("test/b{a}")]
+        public string Test1(string a)
+        {
+            return a;
+        }
+        [Route("test/c{a}")]
+        public string Test2(string a)
+        {
+            return a;
         }
     }
 }

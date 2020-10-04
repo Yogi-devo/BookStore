@@ -1,5 +1,3 @@
-D:\dotnet core mvc 3.1\BookStore\BookStore\bin\Debug\netcoreapp3.1\appsettings.Development.json
-D:\dotnet core mvc 3.1\BookStore\BookStore\bin\Debug\netcoreapp3.1\appsettings.json
 D:\dotnet core mvc 3.1\BookStore\BookStore\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\dotnet core mvc 3.1\BookStore\BookStore\bin\Debug\netcoreapp3.1\BookStore.exe
 D:\dotnet core mvc 3.1\BookStore\BookStore\bin\Debug\netcoreapp3.1\BookStore.deps.json
@@ -852,3 +850,7 @@ F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\Sy
 F:\BookStore\BookStore\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 F:\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Book\AddNewBooks.cshtml.g.cs
 D:\dotnet core mvc 3.1\BookStore\BookStore\obj\Debug\netcoreapp3.1\BookStore.csprojAssemblyReference.cache
+D:\dotnet core mvc 3.1\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_footer.cshtml.g.cs
+D:\dotnet core mvc 3.1\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_header.cshtml.g.cs
+D:\dotnet core mvc 3.1\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_bookThumbnail.cshtml.g.cs
+D:\dotnet core mvc 3.1\BookStore\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\TopBooks\Default.cshtml.g.cs

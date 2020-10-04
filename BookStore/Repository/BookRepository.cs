@@ -9,8 +9,8 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace BookStore.Repository
 {
-   
-    public class BookRepository
+
+    public class BookRepository : IBookRepository
     {
         private readonly BookStoreContext _context = null;
 
@@ -43,13 +43,26 @@ namespace BookStore.Repository
                 Author = model.Author,
                 Title = model.Title,
                 Description = model.Description,
-                TotalPages = model.TotalPages.HasValue? model.TotalPages.Value : 0,
+                TotalPages = model.TotalPages.HasValue ? model.TotalPages.Value : 0,
                 CreatedOn = DateTime.UtcNow,
                 UpdatedOn = DateTime.UtcNow,
                 Category = model.Category,
                 LanguageId = model.LanguageId,
-                CoverImageUrl=model.CoverImageUrl
+                CoverImageUrl = model.CoverImageUrl,
+                BookPdfUrl = model.BookPdfUrl
             };
+
+            //var gallery = new List<BookGallery>();
+            newBook.bookGallery = new List<BookGallery>();
+            foreach (var file in model.Gallery)
+            {
+                newBook.bookGallery.Add(new BookGallery
+                {
+                    Name = file.Name,
+                    URL = file.URL,
+                });
+            }
+
             await _context.Books.AddAsync(newBook);
             await _context.SaveChangesAsync();
             return newBook.id;
@@ -58,7 +71,7 @@ namespace BookStore.Repository
         {
             var books = new List<BookModel>();
             var allbooks = await _context.Books.ToListAsync();
-            if(allbooks?.Any()==true)
+            if (allbooks?.Any() == true)
             {
                 foreach (var book in allbooks)
                 {
@@ -73,16 +86,36 @@ namespace BookStore.Repository
                         Title = book.Title,
                         id = book.id,
                         CoverImageUrl = book.CoverImageUrl
-                    })  ;
+                    });
                 }
             }
             return books;
         }
-        public  async Task<BookModel> GetBookById(int id)
+
+        public async Task<List<BookModel>> GetTopBooksAsync(int count) //its for View Component
+        {
+            return await _context.Books
+                .Select(book => new BookModel()
+                {
+                    Author = book.Author,
+                    Category = book.Category,
+                    Description = book.Description,
+                    LanguageId = book.LanguageId,
+                    //Language = book.Language.Name,
+                    TotalPages = book.TotalPages,
+                    Title = book.Title,
+                    id = book.id,
+                    CoverImageUrl = book.CoverImageUrl
+                }).Take(count).ToListAsync();
+        }
+
+
+
+        public async Task<BookModel> GetBookById(int id)
         {
             return await _context.Books.Where(x => x.id == id)
-                .Select(book=>new BookModel()
-            
+                .Select(book => new BookModel()
+
                 {
                     Author = book.Author,
                     Category = book.Category,
@@ -92,9 +125,17 @@ namespace BookStore.Repository
                     TotalPages = book.TotalPages,
                     Title = book.Title,
                     id = book.id,
-                    CoverImageUrl=book.CoverImageUrl
+                    CoverImageUrl = book.CoverImageUrl,
+                    Gallery = book.bookGallery.Select(g => new GalleryModel()
+                    {
+                        Id = g.Id,
+                        Name = g.Name,
+                        URL = g.URL
+                    }).ToList(),
+                    BookPdfUrl = book.BookPdfUrl
                 }).FirstOrDefaultAsync();
-                
+
+
             //return DataSource().Where(x => x.id == id).FirstOrDefault();
         }
         public List<BookModel> SearchBook(string title, string authorName)
@@ -102,7 +143,12 @@ namespace BookStore.Repository
             return null;
             //return DataSource().Where(x => x.Title.Contains(title) || x.Author.Contains (authorName)).ToList();
         }
-       
+
+        public string GetAppName()
+        {
+            return "Book Store App";
+        }
+
     }
 
 }
