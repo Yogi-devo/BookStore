@@ -5,19 +5,30 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Dynamic;
 using BookStore.Models;
+using Microsoft.Extensions.Configuration;
 
 namespace BookStore.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IConfiguration _configuration;
+
+        public HomeController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
+
         [ViewData]
         public string CustoProperty { get; set; } //its for ViewData Property
 
         [ViewData]
         public string Title { get; set; } //its ViewData Property for setting title dynamically without rwiting at view page
         public ViewResult Index()
-
         {
+            var alert = _configuration.GetValue<bool>("NewBookAllert:DisplayNewBookAllert");
+            var bookName = _configuration.GetValue<string>("NewBookAllert:BookName");
+
             ViewBag.Title = 123;
             ViewBag.Title = "Yogi Tech";
             dynamic data = new ExpandoObject();

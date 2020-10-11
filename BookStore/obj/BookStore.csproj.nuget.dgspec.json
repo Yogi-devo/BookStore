@@ -1,26 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dotnet core mvc 3.1\\BookStore\\BookStore\\BookStore.csproj": {}
+    "E:\\dotnet core mvc 3.1\\BookStore\\BookStore\\BookStore.csproj": {}
   },
   "projects": {
-    "D:\\dotnet core mvc 3.1\\BookStore\\BookStore\\BookStore.csproj": {
+    "E:\\dotnet core mvc 3.1\\BookStore\\BookStore\\BookStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dotnet core mvc 3.1\\BookStore\\BookStore\\BookStore.csproj",
+        "projectUniqueName": "E:\\dotnet core mvc 3.1\\BookStore\\BookStore\\BookStore.csproj",
         "projectName": "BookStore",
-        "projectPath": "D:\\dotnet core mvc 3.1\\BookStore\\BookStore\\BookStore.csproj",
-        "packagesPath": "C:\\Users\\Yogendra\\.nuget\\packages\\",
-        "outputPath": "D:\\dotnet core mvc 3.1\\BookStore\\BookStore\\obj\\",
+        "projectPath": "E:\\dotnet core mvc 3.1\\BookStore\\BookStore\\BookStore.csproj",
+        "packagesPath": "C:\\Users\\yogi\\.nuget\\packages\\",
+        "outputPath": "E:\\dotnet core mvc 3.1\\BookStore\\BookStore\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Yogendra\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\yogi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -43,6 +38,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[3.1.7, )"
@@ -80,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

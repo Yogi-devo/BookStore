@@ -46,7 +46,7 @@ namespace BookStore.Controllers
         }
        
         
-        public async Task<ViewResult> AddNewBooks(bool isSuccess=false,int bookId=0)
+        public ViewResult AddNewBooks(bool isSuccess=false,int bookId=0)
         {
             var model = new BookModel()
             {
@@ -57,7 +57,7 @@ namespace BookStore.Controllers
             //ViewBag.Language = new List<string> {"English", "Hindi" ,"Dutch"};
             ViewBag.IsSuccess = isSuccess;
             ViewBag.BookId = bookId;
-            return View(model);
+             return View(model);
         }
         [HttpPost]
         public async Task<IActionResult> AddNewBooks(BookModel bookModel)
