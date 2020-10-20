@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 using System.Dynamic;
 using BookStore.Models;
 using Microsoft.Extensions.Configuration;
+using BookStore.Service;
 
 namespace BookStore.Controllers
 {
     public class HomeController : Controller
     {
         private readonly IConfiguration _configuration;
+        private readonly IUserService _userService;
 
-        public HomeController(IConfiguration configuration)
+        public HomeController(IConfiguration configuration, IUserService userService)
         {
             _configuration = configuration;
+            _userService = userService;
         }
 
 
@@ -26,6 +29,8 @@ namespace BookStore.Controllers
         public string Title { get; set; } //its ViewData Property for setting title dynamically without rwiting at view page
         public ViewResult Index()
         {
+            var userId = _userService.GetUserId();
+            var IsLoggedIn = _userService.IsAuthenticated();
             var alert = _configuration.GetValue<bool>("NewBookAllert:DisplayNewBookAllert");
             var bookName = _configuration.GetValue<string>("NewBookAllert:BookName");
 

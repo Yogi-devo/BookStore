@@ -41,5 +41,39 @@ namespace BookStore.Controllers
             }
             return View();
         }
+
+        [Route("login")]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [Route("login")]
+        [HttpPost]
+        public async Task< IActionResult> Login(SignInModel signInModel,string returnUrl)
+        {
+            if(ModelState.IsValid)
+            {
+                var result = await _accountRepository.PasswordSignIn(signInModel);
+
+                 if(result.Succeeded)
+                 {
+                    if(!string.IsNullOrEmpty(returnUrl))
+                    {
+                        return LocalRedirect(returnUrl);
+                    }
+                    return RedirectToAction("Index", "Home");
+                 }
+                ModelState.AddModelError("", "Invalid Credentials");
+            }
+                
+            return View();
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+           await _accountRepository.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

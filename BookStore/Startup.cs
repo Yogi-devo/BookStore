@@ -4,8 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using BookStore.Data;
+using BookStore.Helpers;
 using BookStore.Models;
 using BookStore.Repository;
+using BookStore.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -36,10 +38,26 @@ namespace BookStore
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<BookStoreContext>();
+            services.Configure<IdentityOptions>(Option =>
+            {
+                Option.Password.RequiredLength = 4;
+                Option.Password.RequiredUniqueChars = 1;
+                Option.Password.RequireDigit = false;
+                Option.Password.RequireLowercase = false;
+                Option.Password.RequireUppercase= false;
+                Option.Password.RequireNonAlphanumeric = false;
+            });
             services.AddControllersWithViews();
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<ILanguageRepository, LanguageRepository>();
             services.AddScoped<IAccountRepository, AccountRepository>();
+            services.ConfigureApplicationCookie(config =>
+            {
+                config.LoginPath = _configuration["Applicatio:LoginPath"];
+            });
+
+            services.AddScoped<IUserClaimsPrincipalFactory<ApplicationUser>, ApplicationUserClaimsPrincipalFactory>();
+            services.AddScoped < IUserService, UserService > ();
 
 #if DEBUG
 
@@ -92,6 +110,7 @@ namespace BookStore
             app.UseRouting();
 
             app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
