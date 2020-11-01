@@ -7,8 +7,9 @@
     <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Hello @(User.FindFirst("userFirstName").Value+ " " + User.FindFirst("userLastName").Value)
     </a>
-    <div class="dropdown-menu" area-labelledby="navbarDropdown" >
-        <a class="dropdown-item btn-outline-primary" asp-action="Logout" asp-controller="Account" >Logout</a>
+    <div class="dropdown-menu" area-labelledby="navbarDropdown">
+        <a class="dropdown-item btn-outline-primary" asp-action="Logout" asp-controller="Account">Logout</a>
+        <a class="dropdown-item btn-outline-primary" asp-action="ChangePassword" asp-controller="Account">Change password</a>
     </div>
     </li>
  }

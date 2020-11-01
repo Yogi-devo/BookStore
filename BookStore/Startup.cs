@@ -58,6 +58,8 @@ namespace BookStore
 
             services.AddScoped<IUserClaimsPrincipalFactory<ApplicationUser>, ApplicationUserClaimsPrincipalFactory>();
             services.AddScoped < IUserService, UserService > ();
+            services.Configure<SMTPConfigModel>(_configuration.GetSection("SMTPConfig"));
+            services.AddScoped<IEmailService, EmailService>();
 
 #if DEBUG
 

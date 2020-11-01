@@ -14,11 +14,14 @@ namespace BookStore.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly IUserService _userService;
+        private readonly IEmailService _emailService;
 
-        public HomeController(IConfiguration configuration, IUserService userService)
+        public HomeController(IConfiguration configuration, IUserService userService,
+            IEmailService emailService)
         {
             _configuration = configuration;
             _userService = userService;
+            _emailService = emailService;
         }
 
 
@@ -27,8 +30,14 @@ namespace BookStore.Controllers
 
         [ViewData]
         public string Title { get; set; } //its ViewData Property for setting title dynamically without rwiting at view page
-        public ViewResult Index()
+        public async Task<ViewResult> Index()
         {
+            UserEmailOptions options = new UserEmailOptions()
+            {
+                ToEmails = new List<string>() { "test@gmail.com" }
+            };
+            await _emailService.SendTestMail(options);
+
             var userId = _userService.GetUserId();
             var IsLoggedIn = _userService.IsAuthenticated();
             var alert = _configuration.GetValue<bool>("NewBookAllert:DisplayNewBookAllert");
